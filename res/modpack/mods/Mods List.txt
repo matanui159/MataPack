@@ -42,7 +42,7 @@ Mods:
 - Natura 1.7.10-92.8a1150f by progwml6 (http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1294968-natura)
 - Nether Ores 2.3.0 by Team CoFH (http://teamcofh.com/)
 - Not Enough Items 1.0.4.79 by ChickenBones (http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1279956-chickenbones-mods)
-- Pam's Weee! Flowers 1.7.2b by Pam ([url=http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1274678-1-6-x-1-5-2-others-pams-mods-feb-9th-im-back]link[/link])
+- Pam's Weee! Flowers 1.7.2b by Pam (http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1274678-1-6-x-1-5-2-others-pams-mods-feb-9th-im-back)
 - Primitive Mobs 1.0 by Daveyx0 (http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1287666-primitive-mobs-v1-0c-updated-10-13-14-its-back)
 - Redstone Arsenal 1.1.1 by Team CoFH (http://teamcofh.com/)
 - Resource Loader 1.2 by lumien (http://www.curse.com/mc-mods/minecraft/226447-resource-loader)
