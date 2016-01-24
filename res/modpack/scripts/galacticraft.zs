@@ -11,16 +11,16 @@ recipes.remove(<GalacticraftCore:tile.telemetry>);
 recipes.remove(<GalacticraftCore:tile.spinThruster>);
 
 # Compressed Copper
-recipes.addShapeless(<GalacticraftCore:item.basicItem:6>, [<ore:ingotCopper>, <ImmersiveEngineering:tool>.transformDamage()]);
+recipes.addShapeless(<GalacticraftCore:item.basicItem:6>, [<ore:ingotCopper>, <ImmersiveEngineering:tool>]);
 
 # Compressed Tin
-recipes.addShapeless(<GalacticraftCore:item.basicItem:7>, [<ore:ingotTin>, <ImmersiveEngineering:tool>.transformDamage()]);
+recipes.addShapeless(<GalacticraftCore:item.basicItem:7>, [<ore:ingotTin>, <ImmersiveEngineering:tool>]);
 
 # Compressed Bronze
-recipes.addShapeless(<GalacticraftCore:item.basicItem:10>, [<ore:ingotBronze>, <ImmersiveEngineering:tool>.transformDamage()]);
+recipes.addShapeless(<GalacticraftCore:item.basicItem:10>, [<ore:ingotBronze>, <ImmersiveEngineering:tool>]);
 
 # Heavy Duty Plate
-recipes.addShapeless(<GalacticraftCore:item.heavyPlating>, [<ore:plateSteel>, <ore:plateAluminum>, <ore:plateBronze>, <ImmersiveEngineering:tool>.transformDamage()]);
+recipes.addShapeless(<GalacticraftCore:item.heavyPlating>, [<ore:plateSteel>, <ore:plateAluminum>, <ore:plateBronze>, <ImmersiveEngineering:tool>]);
 
 # Tin Canister
 recipes.remove(<GalacticraftCore:item.canister>);
@@ -131,4 +131,4 @@ recipes.remove(<GalacticraftCore:item.buggymat:2>);
 recipes.addShaped(<GalacticraftCore:item.buggymat:2>, [[<ore:ingotSteel>, <ore:plateSteel>, <ore:ingotSteel>], [<ore:plateSteel>, <minecraft:chest>, <ore:plateSteel>], [<ore:ingotSteel>, <ore:plateSteel>, <ore:ingotSteel>]]);
 
 # Advanced Wafer
-recipes.addShapeless(<GalacticraftCore:item.basicItem:14>, [<GalacticraftCore:item.heavyPlating>, <ore:circuitElite>, <ImmersiveEngineering:tool>.transformDamage()]);
+recipes.addShapeless(<GalacticraftCore:item.basicItem:14>, [<GalacticraftCore:item.heavyPlating>, <ore:circuitElite>, <ImmersiveEngineering:tool>]);

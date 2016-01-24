@@ -9,10 +9,10 @@ recipes.remove(<GalacticraftMars:tile.walkwayOxygenPipe>);
 recipes.remove(<GalacticraftMars:tile.walkwayWire>);
 
 # Heavy Duty Plate Tier 2
-recipes.addShapeless(<GalacticraftMars:item.null:3>, [<GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <ImmersiveEngineering:tool>.transformDamage()]);
+recipes.addShapeless(<GalacticraftMars:item.null:3>, [<GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <ImmersiveEngineering:tool>]);
 
 # Heavy Duty Plate Tier 3
-recipes.addShapeless(<GalacticraftMars:item.itemBasicAsteroids>, [<GalacticraftMars:item.null:3>, <GalacticraftMars:item.null:3>, <ImmersiveEngineering:tool>.transformDamage()]);
+recipes.addShapeless(<GalacticraftMars:item.itemBasicAsteroids>, [<GalacticraftMars:item.null:3>, <GalacticraftMars:item.null:3>, <ImmersiveEngineering:tool>]);
 
 # Fluid Manipulator
 recipes.remove(<GalacticraftMars:item.null:6>);
