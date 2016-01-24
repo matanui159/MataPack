@@ -1,0 +1,3 @@
+So you're completely alone in the middle of a dangerous and deadly world. What do you do? Do you become and expert tinkerer and make powerful tools? Do you get every single ore with your quarries and excavators? Do you go to space? It's up to you.
+
+MataPack is a tech-based modpack which is designed, not to be over difficult (with mods like Enviromine), but rather only give a sense of insecurity in a hostile world. It also has a complete recipe revamp so all the mods will work better together, so everything has a similar look, and so it is more balanced.

@@ -1,0 +1,3 @@
+Minecraft #mcversion#
+Minecraft Forge #forgeversion#
+#modsloaded# mods loaded, #modsactive# mods active
