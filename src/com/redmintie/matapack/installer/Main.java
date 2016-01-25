@@ -32,12 +32,15 @@ public class Main implements Runnable {
 			ex.printStackTrace();
 		}
 		
+		System.out.println("SETTING LOOK AND FEEL");
 		try {
 			UIManager.setLookAndFeel(new NimbusLookAndFeel());
-			SwingUtilities.invokeLater(new Main());
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
+		
+		System.out.println("CREATING WINDOW");
+		SwingUtilities.invokeLater(new Main());
 	}
 	
 	@Override

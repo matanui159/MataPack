@@ -39,21 +39,20 @@ public class Installer implements Runnable, ActionListener {
 	}
 	public static void install(InputStream stream, String dest) throws IOException {
 		System.out.println("INSTALLING: " + dest);
-		
+			
 		File file = new File(dest);
 		if (!file.getParentFile().isDirectory()) {
 			if (!file.getParentFile().mkdirs()) {
-				stream.close();
 				throw new IOException("Failed to make directory '" + file.getParent() + "'");
 			}
 		}
 		
-		FileOutputStream output = new FileOutputStream(file);
-		int length;
-		while ((length = stream.read(BUFFER)) != -1) {
-			output.write(BUFFER, 0, length);
+		try (FileOutputStream output = new FileOutputStream(file)) {
+			int length;
+			while ((length = stream.read(BUFFER)) != -1) {
+				output.write(BUFFER, 0, length);
+			}
 		}
-		output.close();
 	}
 	
 	private JFrame parent;
@@ -83,6 +82,7 @@ public class Installer implements Runnable, ActionListener {
 		dialog.setLocationRelativeTo(null);
 		dialog.setVisible(true);
 		
+		
 		try {
 			String os = System.getProperty("os.name").toLowerCase();
 			System.out.println("OS NAME: " + os);
@@ -108,29 +108,30 @@ public class Installer implements Runnable, ActionListener {
 			}
 			
 			System.out.println("COUNTING FILES");
-			JarInputStream input = new JarInputStream(new FileInputStream(jar));
-			JarEntry entry;
 			int count = 0;
-			while ((entry = input.getNextJarEntry()) != null) {
-				if (entry.getName().startsWith("res/modpack/") && !entry.getName().endsWith("/")) {
-					count++;
+			try (JarInputStream input = new JarInputStream(new FileInputStream(jar))) {
+				JarEntry entry;
+				while ((entry = input.getNextJarEntry()) != null) {
+					if (entry.getName().startsWith("res/modpack/") && !entry.getName().endsWith("/")) {
+						count++;
+					}
 				}
 			}
-			input.close();
 			System.out.println("FOUND " + count + " FILES");
 			bar.setMaximum(count);
 			
 			System.out.println("INSTALLING MODPACK");
-			input = new JarInputStream(new FileInputStream(jar));
-			count = 0;
-			while ((entry = input.getNextJarEntry()) != null) {
-				String name = entry.getName();
-				if (name.startsWith("res/modpack/") && !name.endsWith("/")) {
-					bar.setValue(++count);
-					install(input, name.replace("res/modpack", modpack));
+			try (JarInputStream input = new JarInputStream(new FileInputStream(jar))) {
+				JarEntry entry;
+				count = 0;
+				while ((entry = input.getNextJarEntry()) != null) {
+					String name = entry.getName();
+					if (name.startsWith("res/modpack/") && !name.endsWith("/")) {
+						bar.setValue(++count);
+						install(input, name.replace("res/modpack", modpack));
+					}
 				}
 			}
-			input.close();
 			
 			System.out.println("INSTALLING VERSION");
 			install(Main.class.getResourceAsStream("/res/version.json"),
