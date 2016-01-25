@@ -8,11 +8,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
 
@@ -23,7 +21,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 import javax.swing.border.EmptyBorder;
 
-import com.google.gson.Gson;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
 
 public class Installer implements Runnable, ActionListener {
 	private static final byte[] BUFFER = new byte[65536];
@@ -65,7 +64,7 @@ public class Installer implements Runnable, ActionListener {
 	}
 	
 	@Override
-	@SuppressWarnings({"unchecked", "rawtypes"})
+	@SuppressWarnings("unchecked")
 	public void run() {
 		JDialog dialog = new JDialog(parent, parent.getTitle());
 		
@@ -138,20 +137,22 @@ public class Installer implements Runnable, ActionListener {
 					minecraft + "/versions/MataPack/MataPack.json");
 			
 			System.out.println("ADDING PROFILE");
-			HashMap<String, String> profile = new HashMap<String, String>();
+			String profiles = minecraft + "/launcher_profiles.json";
+			
+			JSONObject json;
+			try (FileReader reader = new FileReader(profiles)) {
+				json = (JSONObject)JSONValue.parse(reader);
+			}
+			
+			JSONObject profile = new JSONObject();
 			profile.put("name", "MataPack");
 			profile.put("lastVersionId", "MataPack");
 			profile.put("gameDir", modpack);
-			String profiles = minecraft + "/launcher_profiles.json";
+			((JSONObject)json.get("profiles")).put("MataPack", profile);
 			
-			Gson gson = new Gson();
-			FileReader reader = new FileReader(profiles);
-			HashMap json = gson.fromJson(reader, HashMap.class);
-			reader.close();
-			((Map)json.get("profiles")).put("MataPack", profile);
-			PrintWriter writer = new PrintWriter(profiles);
-			writer.println(gson.toJson(json));
-			writer.close();
+			try (FileWriter writer = new FileWriter(profiles)) {
+				JSONValue.writeJSONString(json, writer);
+			}
 			
 			dialog.dispose();
 			JOptionPane.showMessageDialog(parent,

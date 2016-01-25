@@ -1,9 +1,9 @@
 <project name="MataPack Installer" default="pack">
-	<target name="unpack-gson">
-		<unzip src="lib/gson.jar" dest="bin" />
+	<target name="unpack-lib">
+		<unzip src="lib/json-simple.jar" dest="bin" />
 	</target>
 	
-	<target name="pack" depends="unpack-gson">
+	<target name="pack" depends="unpack-lib">
 		<jar destfile="matapack.jar" manifest="manifest.txt">
 			<fileset dir="bin" />
 			<fileset dir="." includes="res/**" />
