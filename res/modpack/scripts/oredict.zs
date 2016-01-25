@@ -9,6 +9,10 @@
 <ore:furnace>.add(<Natura:NetherFurnace>);
 <ore:furnace>.add(<TConstruct:FurnaceSlab>);
 
+# Copper Pickaxe
+<ore:pickaxeCopper>.add(<Metallurgy:copper.pickaxe>);
+<ore:pickaxeCopper>.add(<ThermalFoundation:tool.pickaxeCopper>);
+
 # Blast Brick
 <ore:brickBlast>.add(<minecraft:nether_brick>);
 <ore:brickBlast>.add(<ImmersiveEngineering:stoneDecoration:2>);

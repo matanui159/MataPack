@@ -32,7 +32,7 @@ recipes.addShapeless(<ImmersiveEngineering:metalDevice:5>, [<ImmersiveEngineerin
 recipes.addShapeless(<ImmersiveEngineering:metalDecoration:8>, [<ImmersiveEngineering:coil:4>]);
 
 # LV Capacitor
-recipes.addShaped(<ImmersiveEngineering:metalDevice:1>, [[<ore:ingotTin>, <ore:battery>, <ore:ingotTin>], [<ore:plateTin>, <ore:frameBasic>, <ore:plateTin>], [<ore:cableBasic>, <ImmersiveEngineering:treatedWood:*>, <ore:cableBasic>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice:1>, [[<ore:ingotCopper>, <ore:battery>, <ore:ingotCopper>], [<ore:plateCopper>, <ore:frameBasic>, <ore:plateCopper>], [<ore:cableBasic>, <ImmersiveEngineering:treatedWood:*>, <ore:cableBasic>]]);
 
 # MV Capacitor
 recipes.addShaped(<ImmersiveEngineering:metalDevice:3>, [[<ore:battery>, <ore:plateIron>, <ore:battery>], [<ore:plateIron>, <ore:frameAdvanced>, <ore:plateIron>], [<ore:cableAdvanced>, <ImmersiveEngineering:treatedWood:*>, <ore:cableAdvanced>]]);
@@ -47,7 +47,7 @@ recipes.addShapedMirrored(<ImmersiveEngineering:metalDevice:4>, [[<ImmersiveEngi
 recipes.addShapedMirrored(<ImmersiveEngineering:metalDevice:8>, [[<ImmersiveEngineering:metalDevice:2>, null, <ImmersiveEngineering:metalDevice:6>], [<ore:ingotSteel>, <ore:frameElite>, <ore:ingotSteel>], [<ore:cableAdvanced>, <ImmersiveEngineering:storage:10>, <ore:cableElite>]]);
 
 # Breaker Switch
-recipes.addShaped(<ImmersiveEngineering:metalDevice2>, [[<ImmersiveEngineering:metalDevice>, <minecraft:lever>, <ImmersiveEngineering:metalDevice>], [<ore:ingotTin>, <ore:frameBasic>, <ore:ingotTin>], [<ore:cableBasic>, <ore:ingotTin>, <ore:cableBasic>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice2>, [[<ImmersiveEngineering:metalDevice>, <minecraft:lever>, <ImmersiveEngineering:metalDevice>], [<ore:ingotCopper>, <ore:frameBasic>, <ore:ingotCopper>], [<ore:cableBasic>, <ore:ingotCopper>, <ore:cableBasic>]]);
 
 # Redstone Breaker
 recipes.addShaped(<ImmersiveEngineering:metalDevice2:9>, [[<ImmersiveEngineering:metalDevice:2>, null, <ImmersiveEngineering:metalDevice:2>], [<ore:ingotIron>, <ore:frameAdvanced>, <ore:ingotIron>], [<ore:cableAdvanced>, <ore:dustRedstone>, <ore:cableAdvanced>]]);
@@ -125,7 +125,7 @@ recipes.addShaped(<ImmersiveEngineering:stoneDecoration:6>, [[<ore:ingotSteel>, 
 recipes.addShapedMirrored(<ImmersiveEngineering:metalMultiblock:2> * 2, [[<ore:ingotIron>, <ore:circuitBasic>, <ore:ingotIron>], [<ore:gearIron>, <ore:frameAdvanced>, <ore:gearIron>], [<ore:cableAdvanced>, <minecraft:piston>, <ore:cableAdvanced>]]);
 
 # Fermenter
-recipes.addShapedMirrored(<ImmersiveEngineering:metalMultiblock:3> * 2, [[<ore:ingotSteel>, <ore:circuitBasic>, <ore:ingotSteel>], [<ore:gearIron>, <ore:frameElite>, <ore:gearIron>], [<ore:cableElite>, <minecraft:piston>, <ore:cableElite>]]);
+recipes.addShapedMirrored(<ImmersiveEngineering:metalMultiblock:3> * 2, [[<ore:ingotSteel>, <ore:circuitBasic>, <ore:ingotSteel>], [<ore:gearSilver>, <ore:frameElite>, <ore:gearSilver>], [<ore:cableElite>, <minecraft:piston>, <ore:cableElite>]]);
 
 # Industrial Hemp Seeds
 recipes.addShapeless(<ImmersiveEngineering:seed>, [<minecraft:wheat_seeds>]);
