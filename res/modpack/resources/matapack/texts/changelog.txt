@@ -1,6 +1,7 @@
-Version 0.0.0.4:
+Version 0.0.0.5:
  - First Public Release
  - Added BiblioWoods Natura
- - Added recipe for rotten flesh to leather
+ - Updated Thermal Expansion
+ - Multiple recipe changes
  - Bug fixes
  - Removed Herobrine

@@ -12,16 +12,19 @@ recipes.remove(<ThermalExpansion:Tesseract>);
 recipes.remove(<ThermalExpansion:Plate>);
 
 # Nullifier
-recipes.addShaped(<ThermalExpansion:Device:5>, [[null, null, null], [<ore:ingotIron>, <ore:frameBasic>, <ore:ingotIron>], [<ore:dustRedstone>, <minecraft:lava_bucket>, <ore:dustRedstone>]]);
+recipes.addShaped(<ThermalExpansion:Device:5>, [[null, null, null], [<ore:ingotCopper>, <ore:frameBasic>, <ore:ingotCopper>], [<ore:ingotIron>, <minecraft:lava_bucket>, <ore:ingotIron>]]);
 
 # Terrain Smasher
-recipes.addShaped(<ThermalExpansion:Device:3>, [[null, null, null], [<ore:ingotCopper>, <ore:frameBasic>, <ore:ingotCopper>], [<ore:dustRedstone>, <ore:pickaxeCopper>, <ore:dustRedstone>]]);
+recipes.addShaped(<ThermalExpansion:Device:3>, [[null, null, null], [<ore:ingotCopper>, <ore:frameBasic>, <ore:ingotCopper>], [<ore:ingotIron>, <ore:pickaxeCopper>, <ore:ingotIron>]]);
+
+# Acquisition Apparatus
+recipes.addShaped(<ThermalExpansion:Device:4>, [[null, null, null], [<ore:ingotCopper>, <ore:frameBasic>, <ore:ingotCopper>], [<ore:ingotIron>, <minecraft:ender_pearl>, <ore:ingotIron>]]);
 
 # Galcial Parcipitator
 recipes.addShaped(<ThermalExpansion:Machine:6>, [[null, null, null], [<minecraft:snowball>, <ore:frameAdvanced>, <minecraft:snowball>], [<ore:cableAdvanced>, <ore:ingotIron>, <ore:cableAdvanced>]]);
 
 # Igneous Extruder
-recipes.addShaped(<ThermalExpansion:Machine:7>, [[null, null, null], [<GalacticraftCore:item.canister>, <ore:frameAdvanced>, <GalacticraftCore:item.canister>], [<ore:cableAdvanced>, <ore:ingotIron>, <ore:cableAdvanced>]]);
+recipes.addShaped(<ThermalExpansion:Machine:7>, [[null, null, null], [<GalacticraftCore:item.canister>, <ore:frameAdvanced>, <GalacticraftCore:item.canister>], [<ore:ingotIron>, <ore:plateIron>, <ore:ingotIron>]]);
 
 # Magma Crucible
 recipes.addShaped(<ThermalExpansion:Machine:4>, [[null, null, null], [<minecraft:blaze_powder>, <GalacticraftMars:item.null:6>, <minecraft:blaze_powder>], [<ore:cableElite>, <ore:ingotSteel>, <ore:cableElite>]]);
